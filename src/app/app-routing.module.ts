@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { WelcomeComponent } from './welcome/welcome.component';
+import { WeatherComponent } from './weather/weather.component';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
+  { path: 'weather', component: WeatherComponent },
   { path: 'training', loadChildren: './training/training.module#TrainingModule', canLoad: [AuthGuard] }
 ];
 

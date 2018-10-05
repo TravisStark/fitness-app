@@ -19,13 +19,16 @@ import { environment } from '../environments/environment';
 import { UIService } from './shared/ui.service';
 import { AuthModule } from './auth/auth.module';
 import { reducers } from './app.reducer';
+import { WeatherComponent } from './weather/weather.component';
+import { WeatherService } from './weather/weather.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { reducers } from './app.reducer';
     AngularFirestoreModule,
     StoreModule.forRoot(reducers)
   ],
-  providers: [AuthService, TrainingService, UIService],
+  providers: [AuthService, TrainingService, UIService, WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
