@@ -5,7 +5,7 @@
     </button>
   </div>
   <div>
-    <a routerLink="/"><mat-icon>home</mat-icon></a>
+    <a routerLink="/">Fitness Trainer</a>
   </div>
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
     <ul fxLayout fxLayoutGap="10px" class="navigation-items">
@@ -17,6 +17,9 @@
       </li>
       <li *ngIf="isAuth$ | async">
         <a routerLink="/training">Training</a>
+      </li>
+      <li *ngIf="isAuth$ | async">
+        <a routerLink="/weather">Weather</a>
       </li>
       <li *ngIf="isAuth$ | async">
         <a style="cursor: pointer" (click)="onLogout()">Logout</a>

@@ -1,0 +1,31 @@
+<!-- <section>
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+    [formGroup]="weatherForm"
+    (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input
+        type="email"
+        matInput
+        placeholder="Your email"
+        formControlName="email">
+      <mat-hint>Please enter a valid email. (test@test.com)</mat-hint>
+      <mat-error>Invalid or missing email.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="password"
+        matInput
+        placeholder="Your password"
+        formControlName="password">
+      <mat-hint>Please enter your password.</mat-hint>
+      <mat-error>Missing password.</mat-error>
+    </mat-form-field>
+    <button *ngIf="!(isLoading$ | async)" type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Submit</button>
+    <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
+  </form>
+</section> -->
+
+<script type='text/javascript' src='https://darksky.net/widget/default-small/42.360082,-71.05888/us12/en.js?width=100%&height=70&title=Full Forecast&textColor=333333&bgColor=transparent&transparency=true&skyColor=333333&fontFamily=Default&customFont=&units=us'></script>
